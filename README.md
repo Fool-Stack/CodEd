@@ -1,14 +1,11 @@
 <h1 style="text-align: center;">CodEd - Edutech</h1>
 <h3 style="text-align: center;">The perfect platform to learn code</h3>
 <img src=https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor" alt="drawing" height="20"/>
-<div>
-<table style="width:100%;border: 2px solid white;text-align: center;">
-  <tr>
-    <td><img src="./assets/images/fool.png" alt="drawing" height="100"/></td>
-    <td><img src="./assets/images/logo.png" alt="drawing" width="200"/></td>
-  </tr>
-</table>
-</div>
+<p align="center">
+
+<img src="./assets/images/logo.png" alt="drawing" width="60%"/>
+
+</p>
 
 ## Unique features we offer
 
@@ -67,6 +64,9 @@ $ npm start
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
+
 <p align="center">
+	<img src="./assets/images/fool.png" alt="drawing" width="70"/>
+	<br><br>
 	With :heart: by <a href="http://github.com/Fool-Stack target="_blank">Fool Stack</a>
 </p>
