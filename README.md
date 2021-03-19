@@ -1,6 +1,6 @@
 <h1 style="text-align: center;">CodEd - Edutech</h1>
 <h3 style="text-align: center;">The perfect platform to learn code</h3>
-
+<img src=https://img.shields.io/badge/User%20Interface-Link%20to%20UI-orange?style=flat-square&logo=appveyor" alt="drawing" height="20"/>
 <div>
 <table style="width:100%;border: 2px solid white;text-align: center;">
   <tr>
@@ -36,3 +36,37 @@ Our complete product revolutionises the code learning process, by providing ever
 </table>
 </div>
 
+## Instructions to run
+
+```
+$ git clone https://github.com/Fool-Stack/CodEd
+$ cd CodEd
+$ npm install
+$ npm start
+``` 
+
+**Instructions for Android:**
+- Go to CodeEd/build/app/outputs/apk/release/app-release.apk
+- Install APK on your Android device
+
+**Instructions for iOS:**
+- Open the project file in XCode
+- Run the App to Install
+
+## Contributors
+### Frontend
+- <a href="https://github.com/vinayakguptaa">Vinayak Gupta</a>
+- <a href="https://github.com/Sarthakbh321">Sarthak Bharadwaj</a>
+### App & Design
+- <a href="https://github.com/44t4nk1">Siddharth Singh</a>
+### Backend
+- <a href="https://github.com/jugaldb">Jugal Bhatt</a>
+- <a href="https://github.com/N0v0cain3">Shivam Mehta</a>
+
+## License
+
+[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
+
+<p align="center">
+	With :heart: by <a href="http://github.com/Fool-Stack target="_blank">Fool Stack</a>
+</p>
