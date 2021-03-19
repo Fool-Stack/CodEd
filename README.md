@@ -18,20 +18,9 @@ Our complete product revolutionises the code learning process, by providing ever
 
 ## Tech Stack
 
-<div>
-<table style="width:100%;border: 2px solid white;text-align: center;">
-  <tr>
-    <td><img src="https://cdn.auth0.com/blog/react-js/react.png" alt="drawing" height="100"/></td>
-    <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png" alt="drawing" width="200"/></td>
-    <td><img src="https://webassets.mongodb.com/_com_assets/cms/MongoDB_Logo_FullColorBlack_RGB-4td3yuxzjs.png" alt="drawing" width="200"/></td>
-  </tr>
-  <tr>
-  <td><img src="https://www.kindpng.com/picc/m/355-3557482_flutter-logo-png-transparent-png.png" alt="drawing" height="120"/></td>
-  <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="drawing" height="120"/></td>
-  <td><img src="https://bookface-images.s3.amazonaws.com/logos/7e69eded1f41ba6345f75227e93c32d796e51060.png" alt="drawing" height="120"/></td>
-  </tr>
-</table>
-</div>
+| <img src="https://cdn.auth0.com/blog/react-js/react.png" alt="drawing" height="100"/>|<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png" alt="drawing" width="200"/> | <img src="https://webassets.mongodb.com/_com_assets/cms/MongoDB_Logo_FullColorBlack_RGB-4td3yuxzjs.png" alt="drawing" width="200"/> |
+|:--:|:--:|:--:|
+| <img src="https://www.kindpng.com/picc/m/355-3557482_flutter-logo-png-transparent-png.png" alt="drawing" height="120"/> | <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="drawing" height="120"/> | <img src="https://bookface-images.s3.amazonaws.com/logos/7e69eded1f41ba6345f75227e93c32d796e51060.png" alt="drawing" height="120"/> |
 
 ## Instructions to run
 
@@ -40,30 +29,37 @@ $ git clone https://github.com/Fool-Stack/CodEd
 $ cd CodEd
 $ npm install
 $ npm start
-``` 
+```
 
 **Instructions for Android:**
+
 - Go to CodeEd/build/app/outputs/apk/release/app-release.apk
 - Install APK on your Android device
 
 **Instructions for iOS:**
+
 - Open the project file in XCode
 - Run the App to Install
 
 ## Contributors
+
 ### Frontend
+
 - <a href="https://github.com/vinayakguptaa">Vinayak Gupta</a>
 - <a href="https://github.com/Sarthakbh321">Sarthak Bharadwaj</a>
+
 ### App & Design
+
 - <a href="https://github.com/44t4nk1">Siddharth Singh</a>
+
 ### Backend
+
 - <a href="https://github.com/jugaldb">Jugal Bhatt</a>
 - <a href="https://github.com/N0v0cain3">Shivam Mehta</a>
 
 ## License
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
-
 
 <p align="center">
 	<img src="./assets/images/fool.png" alt="drawing" width="70"/>
