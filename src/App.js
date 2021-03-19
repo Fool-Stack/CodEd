@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [code, setCode] = useState("");
+	const [recording, setRecording] = useState(false);
+	const [stream, setStream] = useState([]);
+	const [startTime, setStartTime] = useState(null);
+	const [isPlaying, setIsPlaying] = useState(false);
+
+	const [timeoutIds, setTimeoutIds] = useState([]);
+	const inputRef = useRef();
+
+	const handleRecordStart = () => {
+		if (recording) {
+			console.log(stream);
+			setRecording(false);
+			return;
+		}
+
+		inputRef.current.focus();
+		setStartTime(Date.now());
+		setStream([]);
+		setCode("");
+		setRecording(true);
+	};
+
+	return <div className="App"></div>;
 }
 
 export default App;
