@@ -1,5 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
+import { useRef, useState } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import LandingPage from "./pages/Landing/LandingPage";
 
 function App() {
 	const [code, setCode] = useState("");
@@ -25,7 +27,15 @@ function App() {
 		setRecording(true);
 	};
 
-	return <div className="App"></div>;
+	return (
+		<div className="App">
+			<Router>
+				<Switch>
+					<Route exact path="/" component={LandingPage} />
+				</Switch>
+			</Router>
+		</div>
+	);
 }
 
 export default App;

@@ -1,0 +1,60 @@
+.landing-page {
+	padding-top: 2% !important;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+.nav-link {
+	text-decoration: none;
+	/* font-weight: bold; */
+	color: white;
+	font-size: 1.3rem;
+	margin: 0 20px;
+}
+
+.nav-link:hover {
+	color: rgb(218, 218, 218);
+}
+
+.quote {
+	margin-top: 15%;
+}
+
+.quote h2 {
+	color: white;
+	font-size: 3rem;
+	margin: 0;
+}
+
+.quote .quotation {
+	font-size: 5rem;
+	color: #FFC4C4;
+}
+
+.quote h2 span {
+	font-size: 3.4rem;
+	color: #FFC4C4;
+}
+
+.jumbo-btn-div {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.jumbo-btn {
+	cursor: pointer;
+	padding: 5% 10%;
+	border: none;
+	border-radius: 12px;
+	font-size: 2rem;
+	letter-spacing: 3px;
+	color: #2D076A;
+	background-color: #FFC4C4;
+	font-weight: bold;
+}
