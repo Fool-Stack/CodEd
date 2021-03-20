@@ -24,6 +24,7 @@ const LoginPage = () => {
 		}).then((data) => {
 			console.log(data);
 			localStorage.setItem("authToken", data.data.token);
+			localStorage.setItem("userType", type);
 			history.push("/dashboard");
 		});
 	};

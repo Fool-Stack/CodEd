@@ -1,12 +1,25 @@
 .dash {
 	display: flex;
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 	min-height: 100vh;
 	background-image: linear-gradient(110.27deg, #3e00a3 0%, #05000e 100%);
 }
 
 .dash .login-nav span {
 	display: flex;
+}
+
+.dash .create {
+	width: 280px;
+	background: linear-gradient(91.9deg, #d59fff 0%, #6a8bff 100%);
+	border-radius: 12px;
+	padding: 12px 10px;
+	color: white;
+	font-size: 18px;
+	outline: none;
+	border: none;
+	margin-top: 0px;
+    margin-right: 10px;
 }
 
 .avatar {
@@ -22,4 +35,122 @@
 
 .dash .login-nav .text-field input {
 	padding: 12px 16px;
+}
+
+.dash .date {
+	width: 100%;
+	height: 25px;
+	padding: 10px 50px;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 19px;
+	color: #9080a9;
+}
+
+.dash .courses {
+	width: 100%;
+	height: 340px;
+	padding: 0px 50px 20px 50px;
+}
+
+.dash .title {
+	font-family: Noto Sans;
+	font-size: 34px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 46px;
+	letter-spacing: 0em;
+	text-align: left;
+}
+
+.dash .courses .cards {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+}
+
+.cards .card {
+	width: 270px !important;
+	height: 300px;
+	margin: 5px 15px 5px 0;
+	text-align: center;
+	background: linear-gradient(180deg, #bc87ff 0%, #8423ff 100%);
+	border-radius: 24px;
+}
+
+.cards .card:nth-child(2n) {
+	background: linear-gradient(0deg, #ff5555 0%, #ffcc91 100%);
+}
+
+.cards .card img {
+	width: 190px;
+	height: 170px;
+	object-fit: contain;
+}
+
+.cards .card .head {
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 30px;
+	color: #f5f5f5;
+}
+
+.cards .card .desc {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	color: #e3e3e3;
+}
+
+.cards .card .price {
+	font-weight: 600;
+	font-size: 26px;
+	line-height: 28px;
+	color: #fff;
+}
+
+.cards .card .lessons {
+	font-weight: 800;
+	font-size: 12px;
+	line-height: 14px;
+	color: #e3e3e3;
+}
+
+.dash .tutorials {
+	width: 40%;
+	height: 45vh;
+	padding: 40px 50px;
+}
+
+.dash .certs {
+	width: 40%;
+	padding: 40px 50px;
+	height: 45vh;
+}
+
+.dash .tutorials .cards {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.dash .tutorials .tile {
+	width: 200px;
+	height: 40px;
+	padding: 5px 20px 5px 0;
+	margin: 10px 0 10px 0;
+}
+
+.dash .tutorials .tile > div {
+	height: 40px;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-around;
+	position: absolute;
+	padding: 0 10px;
+}
+
+.dash .certs .cards img {
+	margin: 10px 30px 10px 0;
 }
