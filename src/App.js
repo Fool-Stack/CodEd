@@ -7,6 +7,7 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import Recording from "./pages/Recording/Recording";
 import StudentEditor from "./pages/StudentEditor/StudentEditor";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 const theme = createMuiTheme({
 	typography: {
@@ -52,6 +53,7 @@ function App() {
 							path="/student/editor"
 							component={StudentEditor}
 						/>
+						<Route exact path="/dashboard" component={Dashboard} />
 					</Switch>
 				</Router>
 			</ThemeProvider>

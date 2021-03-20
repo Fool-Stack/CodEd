@@ -39,7 +39,7 @@ const SignupPage = () => {
 		<div className="login-page">
 			<div className="login-nav">
 				<a href="/">
-					<img src="/assets/main-logo.svg" alt="" />
+					<img src="/assets/logo.svg" alt="" />
 				</a>
 				<span>
 					<a className="signin-btn" href="/login">
