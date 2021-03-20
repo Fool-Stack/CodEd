@@ -6,6 +6,7 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import Recording from "./pages/Recording/Recording";
+import StudentEditor from "./pages/StudentEditor/StudentEditor";
 
 const theme = createMuiTheme({
 	typography: {
@@ -46,6 +47,11 @@ function App() {
 						<Route exact path="/login" component={LoginPage} />
 						<Route exact path="/register" component={SignupPage} />
 						<Route exact path="/editor" component={Recording} />
+						<Route
+							exact
+							path="/student/editor"
+							component={StudentEditor}
+						/>
 					</Switch>
 				</Router>
 			</ThemeProvider>

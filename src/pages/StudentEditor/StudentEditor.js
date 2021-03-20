@@ -7,7 +7,7 @@ import {
 } from "@material-ui/core";
 import React, { useEffect, useRef, useState } from "react";
 import MonacoEditor from "react-monaco-editor";
-import "./Recording.css";
+import { useReactMediaRecorder } from "react-media-recorder";
 import { FiberManualRecord, Pause, PlayArrow, Stop } from "@material-ui/icons";
 import HTMLPreview from "../../components/HTMLPreview/HTMLPreview";
 import WindowBar from "../../components/WindowBar/WindowBar";
@@ -15,13 +15,10 @@ import { Link } from "react-router-dom";
 import CodeResult from "../../components/CodeResult/CodeResult";
 import { languageMap, monacoMap } from "../../utils/languages";
 import { getOutput, getToken } from "../../utils/codeRunning";
-import VideoRecorder from "react-video-recorder";
-import { motion } from "framer-motion";
 
-const Recording = () => {
+const StudentEditor = () => {
 	const [srcDoc, setSrcDoc] = useState("");
 	const [code, setCode] = useState("");
-	const [recording, setRecording] = useState(false);
 	const [stream, setStream] = useState([]);
 	const [startTime, setStartTime] = useState(null);
 	const [isPlaying, setIsPlaying] = useState(false);
@@ -31,6 +28,13 @@ const Recording = () => {
 	const [languageId, setLanguageId] = useState(54);
 	const [language, setLanguage] = useState(languageMap[languageId]);
 	const [codeLoading, setCodeLoading] = useState(false);
+
+	// const {
+	// 	status,
+	// 	startRecording,
+	// 	stopRecording,
+	// 	previewStream,
+	// } = useReactMediaRecorder({ video: true, audio: true });
 
 	const [timeoutIds, setTimeoutIds] = useState([]);
 	const inputRef = useRef();
@@ -52,39 +56,6 @@ const Recording = () => {
 			}
 			setCodeLoading(false);
 		}, 2000);
-	};
-
-	const handleRecordStop = () => {
-		const url = `${process.env.REACT_APP_BACKEND_URL}/lesson/addVideo`;
-		const token = localStorage.getItem("authToken");
-	};
-
-	const handleRecordStart = () => {
-		if (recording) {
-			console.log(stream);
-			setRecording(false);
-			const startCamera = document.getElementsByClassName(
-				"stop-button__Button-sc-1h536gx-0"
-			);
-			console.log(startCamera);
-			startCamera[0].click();
-
-			handleRecordStop();
-			return;
-		}
-
-		const startCamera = document.getElementsByClassName(
-			"record-button__Button-sc-1n5amwk-0"
-		);
-		console.log(startCamera);
-		startCamera[0].click();
-
-		// inputRef.current.focus();
-		setStartTime(Date.now());
-		setStream([]);
-		setCode("");
-		setRecording(true);
-		// startRecording();
 	};
 
 	const pause = () => {
@@ -123,32 +94,8 @@ const Recording = () => {
 	};
 
 	const handleChange = (e) => {
-		if (recording) {
-			const prev = [...stream];
-			const event = {
-				time: Date.now() - startTime,
-				code: e,
-			};
-
-			prev.push(event);
-
-			setStream(prev);
-		}
-
 		setCode(e);
 	};
-
-	useEffect(() => {
-		setTimeout(() => {
-			const startCamera = document.getElementsByClassName(
-				"button__Button-hkteey-0"
-			);
-			console.log(startCamera);
-			if (startCamera[0]) {
-				startCamera[0].click();
-			}
-		}, 500);
-	}, []);
 
 	useEffect(() => {
 		const timeout = setTimeout(() => {
@@ -185,7 +132,7 @@ const Recording = () => {
 
 			<Container style={{ paddingTop: "10px" }}>
 				<Grid container spacing={3}>
-					<Grid item md={6} style={{ position: "relative" }}>
+					<Grid item md={6}>
 						{/* <div className="editor-header">
 							<span>Language: HTML/CSS</span>
 						</div> */}
@@ -202,16 +149,6 @@ const Recording = () => {
 							onChange={handleChange}
 							ref={inputRef}
 						/>
-						<motion.div className="video-div" drag dragMomentum={0}>
-							<VideoRecorder
-								onRecordingComplete={(videoBlob) => {
-									console.log("videoBlob", videoBlob);
-								}}
-								countdownTime={0}
-								replayVideoAutoplayAndLoopOff
-								showReplayControls
-							/>
-						</motion.div>
 					</Grid>
 
 					<Grid item md={1} className="middle-row">
@@ -242,24 +179,7 @@ const Recording = () => {
 						) : (
 							<CodeResult output={output} />
 						)}
-						<div className="action-bar">
-							<IconButton
-								onClick={handleRecordStart}
-								className="recording-btn"
-							>
-								{!recording ? (
-									<Tooltip title="Start Recording">
-										<FiberManualRecord
-											style={{ fill: "white" }}
-										/>
-									</Tooltip>
-								) : (
-									<Tooltip title="Stop Recording">
-										<Stop style={{ fill: "white" }} />
-									</Tooltip>
-								)}
-							</IconButton>
-
+						<div className="action-bar student">
 							<Tooltip title="Play Stream">
 								<IconButton onClick={play} className="play-btn">
 									<PlayArrow style={{ fill: "#2D076A" }} />{" "}
@@ -273,9 +193,6 @@ const Recording = () => {
 									<Pause style={{ fill: "#2D076A" }} />
 								</IconButton>
 							</Tooltip>
-							<h1>
-								{recording ? "Recording..." : "Not Recording"}
-							</h1>
 						</div>
 					</Grid>
 				</Grid>
@@ -284,4 +201,4 @@ const Recording = () => {
 	);
 };
 
-export default Recording;
+export default StudentEditor;

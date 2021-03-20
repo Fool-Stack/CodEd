@@ -39,6 +39,10 @@
 	border-radius: 5px;
 }
 
+.action-bar.student {
+	width: 30% !important;
+}
+
 .action-bar h1 {
 	margin: 0;
 }
@@ -55,4 +59,12 @@
 
 .play-btn {
 	background-color: white !important;
+}
+
+.video-div {
+	width: 200px;
+	height: 50px !important;
+	position: absolute;
+	top: 0;
+	z-index: 100;
 }
