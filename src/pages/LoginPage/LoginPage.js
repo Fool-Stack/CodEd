@@ -23,7 +23,7 @@ const LoginPage = () => {
 			},
 		}).then((data) => {
 			console.log(data);
-			localStorage.setItem("token", data.data.token);
+			localStorage.setItem("authToken", data.data.token);
 			history.push("/dashboard");
 		});
 	};
@@ -31,7 +31,7 @@ const LoginPage = () => {
 		<div className="login-page">
 			<div className="login-nav">
 				<a href="/">
-					<img src="/assets/main-logo.svg" alt="" />
+					<img src="/assets/logo.svg" alt="" />
 				</a>
 				<span>
 					<span>Sign In</span>
