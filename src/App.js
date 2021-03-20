@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LandingPage from "./pages/Landing/LandingPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import SignupPage from "./pages/SignupPage/SignupPage";
 
 const theme = createMuiTheme({
 	typography: {
@@ -42,6 +43,7 @@ function App() {
 					<Switch>
 						<Route exact path="/" component={LandingPage} />
 						<Route exact path="/login" component={LoginPage} />
+						<Route exact path="/register" component={SignupPage} />
 					</Switch>
 				</Router>
 			</ThemeProvider>
