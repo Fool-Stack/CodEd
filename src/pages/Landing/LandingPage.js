@@ -37,7 +37,7 @@ const LandingPage = () => {
 								className="jumbo-btn"
 								onClick={() => history.push("/login")}
 							>
-								Start Now
+								START NOW
 							</button>
 						</div>
 					</Grid>

@@ -2,6 +2,14 @@ import "./App.css";
 import { useRef, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LandingPage from "./pages/Landing/LandingPage";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+
+const theme = createMuiTheme({
+	typography: {
+		fontFamily: "Noto Sans JP",
+	},
+});
 
 function App() {
 	const [code, setCode] = useState("");
@@ -29,11 +37,14 @@ function App() {
 
 	return (
 		<div className="App">
-			<Router>
-				<Switch>
-					<Route exact path="/" component={LandingPage} />
-				</Switch>
-			</Router>
+			<ThemeProvider theme={theme}>
+				<Router>
+					<Switch>
+						<Route exact path="/" component={LandingPage} />
+						<Route exact path="/login" component={LoginPage} />
+					</Switch>
+				</Router>
+			</ThemeProvider>
 		</div>
 	);
 }

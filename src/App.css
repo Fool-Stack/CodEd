@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
 .App {
 	background-color: #2D076A;
-	font-family: "Noto Sans", sans-serif;
+	font-family: "Noto Sans JP", sans-serif;
 	color: white;
 }
