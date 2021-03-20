@@ -46,7 +46,7 @@ function App() {
 						<Route exact path="/" component={LandingPage} />
 						<Route exact path="/login" component={LoginPage} />
 						<Route exact path="/register" component={SignupPage} />
-						<Route exact path="/editor" component={Recording} />
+						<Route exact path="/editor/:id" component={Recording} />
 						<Route
 							exact
 							path="/student/editor"

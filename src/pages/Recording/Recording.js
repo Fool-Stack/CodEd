@@ -17,6 +17,8 @@ import { languageMap, monacoMap } from "../../utils/languages";
 import { getOutput, getToken } from "../../utils/codeRunning";
 import VideoRecorder from "react-video-recorder";
 import { motion } from "framer-motion";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 
 const Recording = () => {
 	const [srcDoc, setSrcDoc] = useState("");
@@ -27,6 +29,7 @@ const Recording = () => {
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [lastPaused, setLastPaused] = useState(0);
 	const [output, setOutput] = useState("");
+	const [videoBlob, setVideoBlob] = useState();
 
 	const [languageId, setLanguageId] = useState(54);
 	const [language, setLanguage] = useState(languageMap[languageId]);
@@ -34,6 +37,8 @@ const Recording = () => {
 
 	const [timeoutIds, setTimeoutIds] = useState([]);
 	const inputRef = useRef();
+
+	const { id } = useParams();
 
 	const runCode = async () => {
 		console.log("Code sent");
@@ -54,9 +59,48 @@ const Recording = () => {
 		}, 2000);
 	};
 
-	const handleRecordStop = () => {
+	const handleRecordStop = async () => {
+		let url = `${process.env.REACT_APP_BACKEND_URL}/lesson/addEvents`;
+		const token = localStorage.getItem("authToken");
+		const data = { events: stream, id };
+
+		try {
+			await axios
+				.post(url, data, {
+					headers: {
+						Authorization: `Bearer ${token}`,
+					},
+				})
+				.then((res) => {
+					console.log(res);
+				});
+		} catch (err) {
+			console.log(err);
+		}
+	};
+
+	const handleVideoUpload = async (blob) => {
 		const url = `${process.env.REACT_APP_BACKEND_URL}/lesson/addVideo`;
 		const token = localStorage.getItem("authToken");
+		const form = new FormData();
+		form.append("video", blob);
+		form.append("id", id);
+
+		console.log(blob);
+
+		try {
+			await axios
+				.post(url, form, {
+					headers: {
+						Authorization: `Bearer ${token}`,
+					},
+				})
+				.then((res) => {
+					console.log(res);
+				});
+		} catch (err) {
+			console.log(err);
+		}
 	};
 
 	const handleRecordStart = () => {
@@ -148,6 +192,8 @@ const Recording = () => {
 				startCamera[0].click();
 			}
 		}, 500);
+
+		console.log(id);
 	}, []);
 
 	useEffect(() => {
@@ -205,7 +251,7 @@ const Recording = () => {
 						<motion.div className="video-div" drag dragMomentum={0}>
 							<VideoRecorder
 								onRecordingComplete={(videoBlob) => {
-									console.log("videoBlob", videoBlob);
+									handleVideoUpload(videoBlob);
 								}}
 								countdownTime={0}
 								replayVideoAutoplayAndLoopOff

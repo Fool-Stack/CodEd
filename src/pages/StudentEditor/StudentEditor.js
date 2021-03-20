@@ -7,8 +7,7 @@ import {
 } from "@material-ui/core";
 import React, { useEffect, useRef, useState } from "react";
 import MonacoEditor from "react-monaco-editor";
-import { useReactMediaRecorder } from "react-media-recorder";
-import { FiberManualRecord, Pause, PlayArrow, Stop } from "@material-ui/icons";
+import { Pause, PlayArrow } from "@material-ui/icons";
 import HTMLPreview from "../../components/HTMLPreview/HTMLPreview";
 import WindowBar from "../../components/WindowBar/WindowBar";
 import { Link } from "react-router-dom";
@@ -20,7 +19,6 @@ const StudentEditor = () => {
 	const [srcDoc, setSrcDoc] = useState("");
 	const [code, setCode] = useState("");
 	const [stream, setStream] = useState([]);
-	const [startTime, setStartTime] = useState(null);
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [lastPaused, setLastPaused] = useState(0);
 	const [output, setOutput] = useState("");
