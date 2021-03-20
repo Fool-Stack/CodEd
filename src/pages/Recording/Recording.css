@@ -1,3 +1,58 @@
-/* .recording-editor-section {
-	min-height: 100vh;
-} */
+.recording-editor-section {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+}
+
+.recording-editor-section .nav {
+	width: 100%;
+	/* background-color: 2D076A !important; */
+}
+
+.editor-header {
+	/* width: 88%; */
+	background-color: black;
+	padding: 1% 1%;
+	padding-left: 10px;
+}
+
+.editor-header span {
+	font-size: 0.8rem;
+}
+
+.recording-editor-section iframe {
+	border: none;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.action-bar {
+	margin-top: 10%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	background-color: #21054d;
+	padding: 3%;
+	border-radius: 5px;
+}
+
+.action-bar h1 {
+	margin: 0;
+}
+
+.middle-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.recording-btn {
+	background-color: red !important;
+}
+
+.play-btn {
+	background-color: white !important;
+}
