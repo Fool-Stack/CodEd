@@ -1,4 +1,11 @@
-import { Container, Grid, Hidden, TextField } from "@material-ui/core";
+import {
+	Container,
+	Grid,
+	Hidden,
+	TextField,
+	Snackbar,
+} from "@material-ui/core";
+import { Alert } from "@material-ui/lab";
 import React, { useState } from "react";
 import axios from "axios";
 import "./LoginPage.css";
@@ -9,11 +16,15 @@ const LoginPage = () => {
 	const [email, setEmail] = useState("");
 	const [pass, setPass] = useState("");
 	const [type, setType] = useState("user");
+	const [error, setError] = useState(false);
 
 	const history = useHistory();
 
 	const Submit = async (e) => {
 		e.preventDefault();
+		if (email === "" || pass === "" || type === "") {
+			return 0;
+		}
 		axios({
 			method: "post",
 			url: "https://cod-ed.herokuapp.com/user/login",
@@ -22,12 +33,17 @@ const LoginPage = () => {
 				password: pass,
 				type: type,
 			},
-		}).then((data) => {
-			console.log(data);
-			localStorage.setItem("authToken", data.data.token);
-			localStorage.setItem("userType", type);
-			history.push("/dashboard");
-		});
+		})
+			.then((data) => {
+				console.log(data);
+				localStorage.setItem("authToken", data.data.token);
+				localStorage.setItem("userType", type);
+				history.push("/dashboard");
+			})
+			.catch((err) => {
+				console.log(err);
+				setError(true);
+			});
 	};
 	return (
 		<div className="login-page">
@@ -140,6 +156,15 @@ const LoginPage = () => {
 					</Container>
 				</Grid>
 			</Grid>
+			<Snackbar
+				autoHideDuration={3000}
+				open={error}
+				onClose={() => setError(false)}
+			>
+				<Alert variant="filled" severity="error">
+					Email or Password is incorrect
+				</Alert>
+			</Snackbar>
 		</div>
 	);
 };

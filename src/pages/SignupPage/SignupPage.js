@@ -1,4 +1,11 @@
-import { Container, Grid, Hidden, TextField } from "@material-ui/core";
+import {
+	Container,
+	Grid,
+	Hidden,
+	TextField,
+	Snackbar,
+} from "@material-ui/core";
+import { Alert } from "@material-ui/lab";
 import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router";
@@ -10,11 +17,21 @@ const SignupPage = () => {
 	const [phone, setPhone] = useState("");
 	const [pass, setPass] = useState("");
 	const [type, setType] = useState("user");
+	const [error, setError] = useState(false);
 
 	const history = useHistory();
 
 	const Submit = async (e) => {
 		e.preventDefault();
+		if (
+			name === "" ||
+			email === "" ||
+			pass === "" ||
+			phone === "" ||
+			type === ""
+		) {
+			return 0;
+		}
 		axios({
 			method: "post",
 			url: "https://cod-ed.herokuapp.com/user/register",
@@ -25,10 +42,15 @@ const SignupPage = () => {
 				number: phone,
 				type: type,
 			},
-		}).then((data) => {
-			console.log(data);
-			history.push("/login");
-		});
+		})
+			.then((data) => {
+				console.log(data);
+				history.push("/login");
+			})
+			.catch((err) => {
+				console.log(err);
+				setError(true);
+			});
 	};
 
 	return (
@@ -161,6 +183,15 @@ const SignupPage = () => {
 					</Container>
 				</Grid>
 			</Grid>
+			<Snackbar
+				autoHideDuration={3000}
+				open={error}
+				onClose={() => setError(false)}
+			>
+				<Alert variant="filled" severity="error">
+					Email already exists
+				</Alert>
+			</Snackbar>
 		</div>
 	);
 };
