@@ -7,6 +7,18 @@
 
 </p>
 
+## About
+CodEd is an all new platform to bring the code learning process to the
+next level. We have been able to implement features such as Code Sharing
+in the IDE by the Instructor, we take it to the next level by implementing
+Code Replay. Code Replay is a feature which automates the code typing 
+just like the instructor with live output and Audio Visual input by the
+instructor, we have further optimised this process by allowing the student
+to be able to just pause the instructor, edit his code and play with it 
+and see various outputs according to their will. We have a wide range of
+language support for our inbuilt IDE having a capability to work with
+45+ languages.
+
 ## Unique features we offer
 
 Our complete product revolutionises the code learning process, by providing everything a curious mind can need on a single platform
@@ -20,7 +32,7 @@ Our complete product revolutionises the code learning process, by providing ever
 
 | <img src="https://cdn.auth0.com/blog/react-js/react.png" alt="drawing" height="100"/>|<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png" alt="drawing" width="200"/> | <img src="https://webassets.mongodb.com/_com_assets/cms/MongoDB_Logo_FullColorBlack_RGB-4td3yuxzjs.png" alt="drawing" width="200"/> |
 |:--:|:--:|:--:|
-| <img src="https://www.kindpng.com/picc/m/355-3557482_flutter-logo-png-transparent-png.png" alt="drawing" height="120"/> | <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="drawing" height="120"/> | <img src="https://bookface-images.s3.amazonaws.com/logos/7e69eded1f41ba6345f75227e93c32d796e51060.png" alt="drawing" height="120"/> |
+| <img src="https://www.inventateq.com/assets/aws_2x.png" alt="drawing" height="120"/> | <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="drawing" height="120"/> | <img src="https://www.netlify.com/img/press/logos/logomark.png" alt="drawing" height="120"/> |
 
 ## Instructions to run
 
@@ -30,16 +42,17 @@ $ cd CodEd
 $ npm install
 $ npm start
 ```
+**Deployed Site**
+<a href="https://coded.jugaldb.com/login">Website</a>
 
-**Instructions for Android:**
+**Backend Repo**
+<a href="https://github.com/Fool-Stack/CodEd-backend">Backend Repo</a>
 
-- Go to CodeEd/build/app/outputs/apk/release/app-release.apk
-- Install APK on your Android device
+**Postman Docs**
+<a href="https://documenter.getpostman.com/view/10014129/Tz5wUtjr#79daa0f4-cd75-4ec4-87b5-a94a93f05644">Postman Docs</a>
 
-**Instructions for iOS:**
-
-- Open the project file in XCode
-- Run the App to Install
+**UI/UX Entry**
+<a href="https://www.figma.com/file/CggHpxwCUY4F5ICp1TmCPE/codEd?node-id=0%3A1">UI/UX Link</a>
 
 ## Contributors
 
