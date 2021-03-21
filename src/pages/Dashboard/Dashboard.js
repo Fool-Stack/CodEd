@@ -3,9 +3,11 @@ import React, { useEffect, useState } from "react";
 import "./Dashboard.css";
 import axios from "axios";
 import { useHistory } from "react-router";
+import CreateCourse from "../../components/CreateCourse/CreateCourse";
 
 const Dashboard = () => {
 	const [courses, setCourses] = useState([]);
+	const [createCourseModal, setCreateCourseModal] = useState(false);
 
 	const Logout = () => {
 		localStorage.removeItem("authToken");
@@ -31,12 +33,21 @@ const Dashboard = () => {
 
 	return (
 		<div className="dash">
+			<CreateCourse
+				open={createCourseModal}
+				handleClose={() => setCreateCourseModal(false)}
+			/>
 			<div className="login-nav">
 				<a href="/">
 					<img src="/assets/logo.svg" alt="" />
 				</a>
 				<span>
-					<button className="create">Create Course</button>
+					<button
+						className="create"
+						onClick={() => setCreateCourseModal(true)}
+					>
+						Create Course
+					</button>
 					<TextField
 						variant="outlined"
 						className="text-field"
@@ -61,7 +72,9 @@ const Dashboard = () => {
 								<div className="head">{c.title}</div>
 								<div className="desc">{c.description}</div>
 								<div className="price">&#8377; {c.price}</div>
-								<div className="lessons">{c.numberOfLessons} Lessons</div>
+								<div className="lessons">
+									{c.numberOfLessons} Lessons
+								</div>
 							</div>
 						);
 					})}
@@ -127,8 +140,8 @@ const Dashboard = () => {
 			<div className="certs">
 				<div className="title">Certificates</div>
 				<div className="cards">
-					<img src="/assets/cert.png"/>
-					<img src="/assets/cert.png"/>
+					<img src="/assets/cert.png" />
+					<img src="/assets/cert.png" />
 				</div>
 			</div>
 		</div>

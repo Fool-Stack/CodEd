@@ -7,11 +7,12 @@
 	background-repeat: no-repeat;
 	background-position: 0% 100%;
 	background-size: 100%;
-	background-image: url("../../assets/login-bg.svg"),
-		linear-gradient(110.27deg, #3e00a3 0%, #05000e 100%);
+	background-image: url("../../assets/login-bg.svg"), linear-gradient(110.27deg, #3e00a3 0%, #05000e 100%);
+	font-family: "Noto Sans JP";
 }
+
 .tagline {
-	font-family: Noto Sans;
+	font-family: "Noto Sans JP";
 	font-size: 30px;
 	font-style: normal;
 	font-weight: 700;
@@ -27,6 +28,7 @@
 	margin: 5px 0;
 	line-height: 82px;
 }
+
 .tagline p span {
 	color: #df9ffe;
 }
@@ -47,7 +49,7 @@
 
 option {
 	height: 20px;
-    padding: 10px 15px;
+	padding: 10px 15px;
 }
 
 .text-field div {
@@ -69,11 +71,11 @@ option {
 
 .login-nav {
 	width: 100%;
-    display: flex;
+	display: flex;
 	height: 44px;
-    padding: 10px 100px 10px 52px;
-    justify-content: space-between;
-    align-items: center;
+	padding: 10px 100px 10px 52px;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .login-nav .signin-btn {
@@ -83,17 +85,17 @@ option {
 	padding: 5px 20px;
 	color: white;
 	font-size: 18px;
-    margin-left: 24px;
+	margin-left: 24px;
 	font-weight: 700;
 	text-decoration: none;
 	margin-right: 10px;
 }
 
-.login-nav span > span {
+.login-nav span>span {
 	margin: 0 25px;
 }
 
-.login-nav span > span::after {
+.login-nav span>span::after {
 	content: '';
 	width: 20px;
 	height: 5px;

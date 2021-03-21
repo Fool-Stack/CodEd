@@ -3,6 +3,11 @@
 	flex-wrap: wrap;
 	min-height: 100vh;
 	background-image: linear-gradient(110.27deg, #3e00a3 0%, #05000e 100%);
+	font-family: "Noto Sans JP", sans-serif !important;
+}
+
+.login-nav {
+	padding-top: 20px;
 }
 
 .dash .login-nav span {
@@ -10,16 +15,18 @@
 }
 
 .dash .create {
-	width: 280px;
+	width: 200px;
 	background: linear-gradient(91.9deg, #d59fff 0%, #6a8bff 100%);
 	border-radius: 12px;
-	padding: 12px 10px;
+	padding: 5px 10px;
 	color: white;
 	font-size: 18px;
 	outline: none;
 	border: none;
 	margin-top: 0px;
-    margin-right: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+	font-family: "Noto Sans JP", sans-serif !important;
 }
 
 .avatar {
@@ -55,7 +62,7 @@
 }
 
 .dash .title {
-	font-family: Noto Sans;
+	font-family: "Noto Sans JP";
 	font-size: 34px;
 	font-style: normal;
 	font-weight: 800;
@@ -142,7 +149,7 @@
 	margin: 10px 0 10px 0;
 }
 
-.dash .tutorials .tile > div {
+.dash .tutorials .tile>div {
 	height: 40px;
 	display: inline-flex;
 	flex-direction: column;

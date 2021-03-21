@@ -8,37 +8,20 @@ import SignupPage from "./pages/SignupPage/SignupPage";
 import Recording from "./pages/Recording/Recording";
 import StudentEditor from "./pages/StudentEditor/StudentEditor";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import Lessons from "./pages/Lessons/Lessons";
 
 const theme = createMuiTheme({
 	typography: {
 		fontFamily: "Noto Sans JP",
 	},
+	// palette: {
+	// 	primary: {
+	// 		main: "#2D076A",
+	// 	},
+	// },
 });
 
 function App() {
-	const [code, setCode] = useState("");
-	const [recording, setRecording] = useState(false);
-	const [stream, setStream] = useState([]);
-	const [startTime, setStartTime] = useState(null);
-	const [isPlaying, setIsPlaying] = useState(false);
-
-	const [timeoutIds, setTimeoutIds] = useState([]);
-	const inputRef = useRef();
-
-	const handleRecordStart = () => {
-		if (recording) {
-			console.log(stream);
-			setRecording(false);
-			return;
-		}
-
-		inputRef.current.focus();
-		setStartTime(Date.now());
-		setStream([]);
-		setCode("");
-		setRecording(true);
-	};
-
 	return (
 		<div className="App">
 			<ThemeProvider theme={theme}>
@@ -48,6 +31,7 @@ function App() {
 						<Route exact path="/login" component={LoginPage} />
 						<Route exact path="/register" component={SignupPage} />
 						<Route exact path="/editor/:id" component={Recording} />
+						<Route exact path="/course/:id" component={Lessons} />
 						<Route
 							exact
 							path="/student/editor"

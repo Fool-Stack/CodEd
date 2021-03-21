@@ -3,6 +3,7 @@ import {
 	Container,
 	Grid,
 	IconButton,
+	Snackbar,
 	Tooltip,
 } from "@material-ui/core";
 import React, { useEffect, useRef, useState } from "react";
@@ -19,8 +20,10 @@ import VideoRecorder from "react-video-recorder";
 import { motion } from "framer-motion";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { Alert } from "@material-ui/lab";
 
-const Recording = () => {
+const Recording = (props) => {
+	const lesson = props.location.state.details;
 	const [srcDoc, setSrcDoc] = useState("");
 	const [code, setCode] = useState("");
 	const [recording, setRecording] = useState(false);
@@ -31,9 +34,10 @@ const Recording = () => {
 	const [output, setOutput] = useState("");
 	const [videoBlob, setVideoBlob] = useState();
 
-	const [languageId, setLanguageId] = useState(54);
-	const [language, setLanguage] = useState(languageMap[languageId]);
+	const [languageId, setLanguageId] = useState(lesson.language);
+	const [language, setLanguage] = useState(languageMap[lesson.language]);
 	const [codeLoading, setCodeLoading] = useState(false);
+	const [videoSuccess, setVideoSuccess] = useState(false);
 
 	const [timeoutIds, setTimeoutIds] = useState([]);
 	const inputRef = useRef();
@@ -97,6 +101,7 @@ const Recording = () => {
 				})
 				.then((res) => {
 					console.log(res);
+					setVideoSuccess(true);
 				});
 		} catch (err) {
 			console.log(err);
@@ -326,6 +331,15 @@ const Recording = () => {
 					</Grid>
 				</Grid>
 			</Container>
+			<Snackbar
+				autoHideDuration={3000}
+				open={videoSuccess}
+				onClose={() => setVideoSuccess(false)}
+			>
+				<Alert variant="filled" severity="success">
+					Video uploaded successfully
+				</Alert>
+			</Snackbar>
 		</div>
 	);
 };

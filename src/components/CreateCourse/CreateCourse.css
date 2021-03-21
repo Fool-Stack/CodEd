@@ -1,0 +1,20 @@
+.create-course-modal .MuiPaper-root {
+	background-color: #2D076A !important;
+	color: white !important;
+}
+
+.modal-text-field .MuiInput-root {
+	/* background-color: #1f0549 !important; */
+}
+
+.modal-text-field .MuiFormLabel-root {
+	color: #6b25d3 !important;
+}
+
+.modal-text-field .MuiInputBase-input {
+	color: white !important;
+}
+
+.language-select .MuiSelect-root {
+	color: white !important;
+}
