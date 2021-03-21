@@ -7,6 +7,18 @@
 
 </p>
 
+## About
+CodEd is an all new platform to bring the code learning process to the
+next level. We have been able to implement features such as Code Sharing
+in the IDE by the Instructor, we take it to the next level by implementing
+Code Replay. Code Replay is a feature which automates the code typing 
+just like the instructor with live output and Audio Visual input by the
+instructor, we have further optimised this process by allowing the student
+to be able to just pause the instructor, edit his code and play with it 
+and see various outputs according to their will. We have a wide range of
+language support for our inbuilt IDE having a capability to work with
+45+ languages.
+
 ## Unique features we offer
 
 Our complete product revolutionises the code learning process, by providing everything a curious mind can need on a single platform
