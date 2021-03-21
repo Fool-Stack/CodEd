@@ -7,6 +7,8 @@
 
 </p>
 
+**First Prize Winning entry at DEVSPACE 2021**
+
 ## About
 CodEd is an all new platform to bring the code learning process to the
 next level. We have been able to implement features such as Code Sharing
