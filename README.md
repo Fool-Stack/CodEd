@@ -54,6 +54,9 @@ $ npm start
 **UI/UX Entry**
 <a href="https://www.figma.com/file/CggHpxwCUY4F5ICp1TmCPE/codEd?node-id=0%3A1">UI/UX Link</a>
 
+**Youtube Video**
+<a href="https://youtu.be/b148SC3Mg-Y">Youtube Video</a>
+
 ## Contributors
 
 ### Frontend
