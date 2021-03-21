@@ -244,7 +244,7 @@ const Recording = (props) => {
 						<MonacoEditor
 							width="100%"
 							height="75vh"
-							language={monacoMap[languageId]}
+							language={monacoMap[languageId] || 71}
 							theme="vs-dark"
 							options={{
 								selectOnLineNumbers: true,
