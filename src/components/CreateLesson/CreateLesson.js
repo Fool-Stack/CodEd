@@ -80,7 +80,7 @@ const CreateLesson = ({ open, handleClose, update }) => {
 					autoFocus
 					margin="dense"
 					id="name"
-					label="Course Title"
+					label="Lesson Title"
 					type="text"
 					fullWidth
 					name="title"
@@ -95,7 +95,7 @@ const CreateLesson = ({ open, handleClose, update }) => {
 					autoFocus
 					margin="dense"
 					id="name"
-					label="Course Description"
+					label="Lesson Description"
 					type="text"
 					name="description"
 					fullWidth
