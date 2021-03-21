@@ -1,12 +1,8 @@
-import {
-	Container,
-	Grid,
-	Hidden,
-	TextField,
-} from "@material-ui/core";
+import { Container, Grid, Hidden, TextField } from "@material-ui/core";
 import React, { useState } from "react";
 import axios from "axios";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 
 const SignupPage = () => {
 	const [name, setName] = useState("");
@@ -42,9 +38,9 @@ const SignupPage = () => {
 					<img src="/assets/logo.svg" alt="" />
 				</a>
 				<span>
-					<a className="signin-btn" href="/login">
+					<Link to="/login" className="signin-btn">
 						Sign In
-					</a>
+					</Link>
 					<span>Register</span>
 				</span>
 			</div>
@@ -64,7 +60,17 @@ const SignupPage = () => {
 						</div>
 					</Grid>
 				</Hidden>
-				<Grid item xs={12} sm={12} md={5}>
+				<Grid
+					item
+					xs={12}
+					sm={12}
+					md={5}
+					style={{
+						display: "flex",
+						justifyContent: "center",
+						alignItems: "center",
+					}}
+				>
 					<Container
 						style={{
 							padding: "5% 8%",

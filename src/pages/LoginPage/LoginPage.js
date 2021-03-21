@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./LoginPage.css";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
 	const [email, setEmail] = useState("");
@@ -36,12 +37,17 @@ const LoginPage = () => {
 				</a>
 				<span>
 					<span>Sign In</span>
-					<a className="signin-btn" href="/register">
+					<Link to="/register" className="signin-btn">
 						Register
-					</a>
+					</Link>
 				</span>
 			</div>
-			<Grid container style={{ height: "calc(100% - 100px)" }}>
+			<Grid
+				container
+				style={{
+					height: "calc(100% - 100px)",
+				}}
+			>
 				<Hidden smDown>
 					<img
 						src="/assets/login.svg"
@@ -57,7 +63,17 @@ const LoginPage = () => {
 						</div>
 					</Grid>
 				</Hidden>
-				<Grid item xs={12} sm={12} md={5}>
+				<Grid
+					item
+					xs={12}
+					sm={12}
+					md={5}
+					style={{
+						display: "flex",
+						justifyContent: "center",
+						alignItems: "center",
+					}}
+				>
 					<Container
 						style={{
 							padding: "5% 8%",
