@@ -14,6 +14,8 @@ const Lessons = () => {
 	const [createLesson, setCreateLesson] = useState(false);
 	const { id } = useParams();
 
+	const userType = localStorage.getItem("userType");
+
 	const history = useHistory();
 
 	const getCourse = async () => {
@@ -39,6 +41,18 @@ const Lessons = () => {
 	};
 
 	const handleLessonClick = (id, lesson) => {
+		console.log(lesson);
+		if (userType === "user") {
+			history.push({
+				pathname: `/student/editor/`,
+				state: {
+					details: lesson,
+				},
+			});
+
+			return;
+		}
+
 		history.push({
 			pathname: `/editor/${id}`,
 			state: {
@@ -108,12 +122,14 @@ const Lessons = () => {
 				<Container>
 					<hr class="hr-text" data-content="LESSONS" />
 					<div className="lesson-action-bar">
-						<button
-							className="create-lesson"
-							onClick={() => setCreateLesson(true)}
-						>
-							Create Lesson
-						</button>
+						{userType !== "user" ? (
+							<button
+								className="create-lesson"
+								onClick={() => setCreateLesson(true)}
+							>
+								Create Lesson
+							</button>
+						) : null}
 					</div>
 					<List style={{ marginTop: "30px" }}>
 						{lessons.map((lesson) => (

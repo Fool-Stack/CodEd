@@ -14,18 +14,22 @@ import { Link } from "react-router-dom";
 import CodeResult from "../../components/CodeResult/CodeResult";
 import { languageMap, monacoMap } from "../../utils/languages";
 import { getOutput, getToken } from "../../utils/codeRunning";
+import { motion } from "framer-motion";
 
-const StudentEditor = () => {
+const StudentEditor = (props) => {
+	const lesson = props.location.state.details;
 	const [srcDoc, setSrcDoc] = useState("");
 	const [code, setCode] = useState("");
-	const [stream, setStream] = useState([]);
+	const [stream, setStream] = useState(lesson.events);
 	const [isPlaying, setIsPlaying] = useState(false);
 	const [lastPaused, setLastPaused] = useState(0);
 	const [output, setOutput] = useState("");
 
-	const [languageId, setLanguageId] = useState(54);
-	const [language, setLanguage] = useState(languageMap[languageId]);
+	const [languageId, setLanguageId] = useState(lesson.language);
+	const [language, setLanguage] = useState(languageMap[lesson.language]);
 	const [codeLoading, setCodeLoading] = useState(false);
+
+	const videoRef = useRef();
 
 	// const {
 	// 	status,
@@ -63,6 +67,8 @@ const StudentEditor = () => {
 			window.clearTimeout(id);
 		});
 
+		videoRef.current.pause();
+
 		// let index = stream.length - timeouts.length;
 		// console.log(index, stream.length, timeouts.length);
 		// setLastPaused(index);
@@ -89,6 +95,8 @@ const StudentEditor = () => {
 
 			setTimeoutIds((prevState) => [...prevState, id]);
 		}
+
+		videoRef.current.play();
 	};
 
 	const handleChange = (e) => {
@@ -147,6 +155,14 @@ const StudentEditor = () => {
 							onChange={handleChange}
 							ref={inputRef}
 						/>
+						<motion.div className="video-div" drag dragMomentum={0}>
+							<video
+								src={lesson.video}
+								width="200px"
+								height="150px"
+								ref={videoRef}
+							/>
+						</motion.div>
 					</Grid>
 
 					<Grid item md={1} className="middle-row">

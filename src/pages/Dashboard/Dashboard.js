@@ -9,12 +9,19 @@ const Dashboard = () => {
 	const [courses, setCourses] = useState([]);
 	const [createCourseModal, setCreateCourseModal] = useState(false);
 
+	const userType = localStorage.getItem("userType");
+
 	const Logout = () => {
 		localStorage.removeItem("authToken");
 		history.push("/");
 	};
 
 	const history = useHistory();
+
+	const handleCardClick = (c) => {
+		console.log(c);
+		history.push(`/course/${c._id}`);
+	};
 
 	useEffect(async () => {
 		axios
@@ -42,12 +49,14 @@ const Dashboard = () => {
 					<img src="/assets/logo.svg" alt="" />
 				</a>
 				<span>
-					<button
-						className="create"
-						onClick={() => setCreateCourseModal(true)}
-					>
-						Create Course
-					</button>
+					{userType !== "user" ? (
+						<button
+							className="create"
+							onClick={() => setCreateCourseModal(true)}
+						>
+							Create Course
+						</button>
+					) : null}
 					<TextField
 						variant="outlined"
 						className="text-field"
@@ -64,7 +73,11 @@ const Dashboard = () => {
 				<div className="cards">
 					{courses.map((c) => {
 						return (
-							<div className="card">
+							<div
+								className="card"
+								style={{ cursor: "pointer" }}
+								onClick={(e) => handleCardClick(c)}
+							>
 								<img
 									src={c.img ? c.img : "/assets/logo.svg"}
 									alt=""
