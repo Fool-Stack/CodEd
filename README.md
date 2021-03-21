@@ -7,7 +7,7 @@
 
 </p>
 
-**First Prize Winning entry at DEVSPACE 2021**
+## First Prize Winning entry at DEVSPACE 2021
 
 ## About
 CodEd is an all new platform to bring the code learning process to the
