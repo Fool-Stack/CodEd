@@ -42,6 +42,8 @@ $ cd CodEd
 $ npm install
 $ npm start
 ```
+**Deployed Site**
+<a href="https://coded.jugaldb.com/login">Website</a>
 
 **Backend Repo**
 <a href="https://github.com/Fool-Stack/CodEd-backend">Backend Repo</a>
