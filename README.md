@@ -31,15 +31,14 @@ $ npm install
 $ npm start
 ```
 
-**Instructions for Android:**
+**Backend Repo**
+<a href="https://github.com/Fool-Stack/CodEd-backend">Backend Repo</a>
 
-- Go to CodeEd/build/app/outputs/apk/release/app-release.apk
-- Install APK on your Android device
+**Postman Docs**
+<a href="https://documenter.getpostman.com/view/10014129/Tz5wUtjr#79daa0f4-cd75-4ec4-87b5-a94a93f05644">Postman Docs</a>
 
-**Instructions for iOS:**
-
-- Open the project file in XCode
-- Run the App to Install
+**UI/UX Entry**
+<a href="https://www.figma.com/file/CggHpxwCUY4F5ICp1TmCPE/codEd?node-id=0%3A1">UI/UX Link</a>
 
 ## Contributors
 
