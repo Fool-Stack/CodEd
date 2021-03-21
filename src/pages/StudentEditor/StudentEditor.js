@@ -146,7 +146,7 @@ const StudentEditor = (props) => {
 						<MonacoEditor
 							width="100%"
 							height="75vh"
-							language={monacoMap[languageId] || 71}
+							language={monacoMap[languageId] || "python"}
 							theme="vs-dark"
 							options={{
 								selectOnLineNumbers: true,
