@@ -20,7 +20,7 @@ Our complete product revolutionises the code learning process, by providing ever
 
 | <img src="https://cdn.auth0.com/blog/react-js/react.png" alt="drawing" height="100"/>|<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1280px-Node.js_logo.svg.png" alt="drawing" width="200"/> | <img src="https://webassets.mongodb.com/_com_assets/cms/MongoDB_Logo_FullColorBlack_RGB-4td3yuxzjs.png" alt="drawing" width="200"/> |
 |:--:|:--:|:--:|
-| <img src="https://www.kindpng.com/picc/m/355-3557482_flutter-logo-png-transparent-png.png" alt="drawing" height="120"/> | <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="drawing" height="120"/> | <img src="https://bookface-images.s3.amazonaws.com/logos/7e69eded1f41ba6345f75227e93c32d796e51060.png" alt="drawing" height="120"/> |
+| <img src="https://www.inventateq.com/assets/aws_2x.png" alt="drawing" height="120"/> | <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="drawing" height="120"/> | <img src="https://bookface-images.s3.amazonaws.com/logos/7e69eded1f41ba6345f75227e93c32d796e51060.png" alt="drawing" height="120"/> |
 
 ## Instructions to run
 
