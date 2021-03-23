@@ -82,5 +82,5 @@ $ npm start
 <p align="center">
 	<img src="./assets/images/fool.png" alt="drawing" width="70"/>
 	<br><br>
-	With :heart: by <a href="http://github.com/Fool-Stack target="_blank">Fool Stack</a>
+	With :heart: by <a href="http://github.com/Fool-Stack" target="_blank">Fool Stack</a>
 </p>
