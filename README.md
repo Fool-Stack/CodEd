@@ -66,7 +66,7 @@ $ npm start
 - <a href="https://github.com/vinayakguptaa">Vinayak Gupta</a>
 - <a href="https://github.com/Sarthakbh321">Sarthak Bharadwaj</a>
 
-### App & Design
+### Design
 
 - <a href="https://github.com/44t4nk1">Siddharth Singh</a>
 
